@@ -1,0 +1,25 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# User inputs and generated outputs
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+output-ui/
+
+# Generated media and archives
+*.wav
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.mid
+*.midi
+*.zip
+

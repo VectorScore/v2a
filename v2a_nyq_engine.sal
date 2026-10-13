@@ -1,0 +1,30 @@
+; v2a_nyq_engine.sal
+; SAL wrapper for the XLISP Nyquist engine.
+; This file is compilable in SAL mode and delegates generation/synthesis to v2a_nyq_engine.lsp.
+
+exec if (not (boundp 'v2a-render-from-features)) (load "v2a_nyq_engine.lsp")
+
+define function v2a_run_sal(data_file, output_file, tempo_override, scale_override, mood, mapping_bias, sensitivity, sample_rate)
+  begin
+    load data_file
+    return v2a-render-from-features(
+      *v2a-segments*,
+      output_file,
+      tempo_override,
+      scale_override,
+      mood,
+      mapping_bias,
+      sensitivity,
+      sample_rate)
+  end
+
+; Example (SAL console):
+; exec v2a_run_sal(
+;   "segment_data.lsp",
+;   "output.wav",
+;   0,
+;   quote(auto),
+;   quote(none),
+;   0.5,
+;   1.0,
+;   44100)

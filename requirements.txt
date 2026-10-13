@@ -1,0 +1,10 @@
+gradio==4.44.1
+numpy>=1.24
+Pillow>=10.0
+imageio>=2.31
+imageio-ffmpeg>=0.4.9
+mido>=1.3
+audioop-lts>=0.2.2; python_version >= "3.13"
+huggingface-hub<1.0
+pydantic<2.10
+
